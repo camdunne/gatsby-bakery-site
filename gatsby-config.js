@@ -33,6 +33,25 @@ module.exports = {
       options: {
         enableIdentityWidget: false,
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/item`,
+        name: 'markdown-pages',
+      },
+    },
+    { 
+      resolve:`gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
   ],
 }

@@ -6,13 +6,13 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: item
-    label: Item
-    folder: item
+  - name: "item"
+    label: "Item"
+    folder: "content/item"
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: name, label: Name }
+      - { name: title, label: Title }
       - { name: price, label: Price, widget: number, valueType: float, min: 0, step: 0.01 }
       - { name: image, label: Image, widget: image }
       - { name: description, label: Description, widget: markdown }
