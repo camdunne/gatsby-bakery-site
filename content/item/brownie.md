@@ -1,8 +1,9 @@
 ---
 path: chocolate-brownie
 title: Chocolate Brownie
-image: static/assets/brownie.jpeg
-price: 2.00
+price: 2
+image: /assets/brownie.jpeg
+description: DESCRIPTION
 ---
 
 <p>Where oh where is that pony?</p>
