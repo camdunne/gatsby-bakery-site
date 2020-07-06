@@ -3768,11 +3768,6 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-codemirror@^5.46.0:
-  version "5.55.0"
-  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.55.0.tgz#23731f641288f202a6858fdc878f3149e0e04363"
-  integrity sha512-TumikSANlwiGkdF/Blnu/rqovZ0Y3Jh8yy9TqrPbSM0xxSucq3RgnpVDQ+mD9q6JERJEIT2FMuF/fBGfkhIR/g==
-
 collapse-white-space@^1.0.0, collapse-white-space@^1.0.2:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/collapse-white-space/-/collapse-white-space-1.0.6.tgz#e63629c0016665792060dbbeb79c42239d2c5287"
@@ -5369,7 +5364,7 @@ escalade@^3.0.1:
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.0.1.tgz#52568a77443f6927cd0ab9c73129137533c965ed"
   integrity sha512-DR6NO3h9niOT+MZs7bjxlj2a1k+POu5RN8CLTPX2+i78bRi9eLe7+0zXgUHMnGXWybYcL61E9hGhPKqedy8tQA==
 
-escape-html@^1.0.3, escape-html@~1.0.3:
+escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
@@ -8953,11 +8948,6 @@ jpeg-js@^0.3.4:
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.7.tgz#471a89d06011640592d314158608690172b1028d"
   integrity sha512-9IXdWudL61npZjvLuVe/ktHiA41iE8qFyLB+4VDTblEsWBzeg8WQTlktdUK4CdncUqtUgUg0bbOmTE2bKBKaBQ==
 
-jquery@^3.4.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
-  integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
-
 js-base64@^2.5.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.2.tgz#cf9301bc5cc756892a9a6c8d7138322e5944fb0d"
@@ -10287,19 +10277,6 @@ netlify-cms-locales@^1.16.0:
   resolved "https://registry.yarnpkg.com/netlify-cms-locales/-/netlify-cms-locales-1.16.0.tgz#7ab26c800fede842112cb7f30c95170ccbf8048d"
   integrity sha512-YBH5hJQ7u94hfW+h54wwheMIfVfNMDxtSjK5adrmXw/AFAwhlpNMs/Ogi7jupG7OK1Vl8ydTA8IlctU59V7fug==
 
-netlify-cms-media-library-cloudinary@^1.3.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-cloudinary/-/netlify-cms-media-library-cloudinary-1.3.4.tgz#ef8aa18ff85d4f1957a5ce4ca89799cda3334ec1"
-  integrity sha512-ujVXy1nhvYISf6Fs/UGgCWEchbEHlrpkBpwFfVdGyOpKanimmVRlqceMPzsLJbnmB2STCPWCG7vOnmvd0hZ7kw==
-
-netlify-cms-media-library-uploadcare@^0.5.5:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/netlify-cms-media-library-uploadcare/-/netlify-cms-media-library-uploadcare-0.5.5.tgz#295e0f5d01c0029df9e5ec03649c76a2f92fc12f"
-  integrity sha512-+pH6UKXD7nuF+WUX3C/Tk0X0vcKHndl4vZJQCdojqtk+PrOBk3VXri5XJkJd2xFUtksdprCRaKPvB2RKbuolEQ==
-  dependencies:
-    uploadcare-widget "^3.7.0"
-    uploadcare-widget-tab-effects "^1.4.0"
-
 netlify-cms-ui-default@^2.11.1:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/netlify-cms-ui-default/-/netlify-cms-ui-default-2.11.1.tgz#f32776dfe38105e0bf430931f6207616d738eda9"
@@ -10421,18 +10398,6 @@ netlify-cms-widget-text@^2.3.0:
   integrity sha512-uAGC9l4zzIGbVgLBGf7X47VKYC0kjKNuqDpplvg8pQ6pZAY70tlV4DxmxAQSOL0mKZS9a45MVNlaiiuj8fAmaA==
   dependencies:
     react-textarea-autosize "^7.1.0"
-
-netlify-cms@^2.10.52:
-  version "2.10.52"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.10.52.tgz#59406837e4260787ddf71ba9c0a24749ed3e3739"
-  integrity sha512-q+th+JwTnNBp2Pd1yw1KtsH/XxjkMxQSJuECsRCX+/PsLvtb9gvbq6DQLmT3FtXedBPRKGQesuvWlALLGpsCng==
-  dependencies:
-    codemirror "^5.46.0"
-    netlify-cms-app "^2.12.16"
-    netlify-cms-media-library-cloudinary "^1.3.4"
-    netlify-cms-media-library-uploadcare "^0.5.5"
-    react "^16.8.4"
-    react-dom "^16.8.4"
 
 netlify-identity-widget@^1.6.0:
   version "1.7.0"
@@ -15371,19 +15336,6 @@ update-notifier@^3.0.1:
     latest-version "^5.0.0"
     semver-diff "^2.0.0"
     xdg-basedir "^3.0.0"
-
-uploadcare-widget-tab-effects@^1.4.0:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/uploadcare-widget-tab-effects/-/uploadcare-widget-tab-effects-1.4.7.tgz#1d87896447716872f4dcb727b009b54fba54f106"
-  integrity sha512-FgHMdVIP8vzgGC772wZTkkh0yN94X+hkZ5uBEdZQlRucOXobyryvPEp2hRJ4wNMt7RLubXVS8WafzEnH6iQX7A==
-
-uploadcare-widget@^3.7.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/uploadcare-widget/-/uploadcare-widget-3.10.0.tgz#3629566aceceb67c0e1a3dcbd137e711423689b7"
-  integrity sha512-IvsoYFBG3GWROo0RAp5G1uQveBm1OsyCaNiZIgczCYrcuZtp1Ic+uYQow9eyD1oAMfSKgPMXcKS7LvQcU9e9OQ==
-  dependencies:
-    escape-html "^1.0.3"
-    jquery "^3.4.1"
 
 upper-case@^1.1.1:
   version "1.1.3"

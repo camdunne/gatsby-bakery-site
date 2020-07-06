@@ -1,17 +1,21 @@
 import React from 'react';
+import Img from "gatsby-image"
 
-const ItemTemplate = ({ pageContext }) => {
-  const { product: { frontmatter, description } } = pageContext;
-  console.log(pageContext)
+
+const ItemTemplate = (props) => {
+  const { pageContext} = props
+  const { product: { frontmatter } } = pageContext;
+console.log(frontmatter.image.childImageSharp.fluid)
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <img alt={frontmatter.title} src={frontmatter.image}/>
+      <div className="post-thumbnail" style={{backgroundImage: `url(${frontmatter.image})`}}></div>
+      <Img fluid={frontmatter.image.childImageSharp.fluid} />
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.price}</h2>
         <div
           className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: description }}
+          dangerouslySetInnerHTML={{ __html: frontmatter.description }}
         />
       </div>
     </div>

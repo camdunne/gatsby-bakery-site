@@ -13,6 +13,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/static/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/item`,
+        name: 'content',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -29,29 +43,21 @@ module.exports = {
     },
     `gatsby-plugin-offline`, 
     {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        enableIdentityWidget: false,
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/item`,
-        name: 'markdown-pages',
-      },
-    },
-    { 
-      resolve:`gatsby-transformer-remark`,
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: `gatsby-remark-images`,
-            options: {},
+            options: {
+              maxWidth: 590,
+            },
           },
         ],
       },
     },
+    `gatsby-plugin-netlify-cms`,
   ],
 }

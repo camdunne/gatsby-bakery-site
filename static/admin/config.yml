@@ -10,6 +10,7 @@ collections:
     label: "Item"
     folder: "content/item"
     create: true
+    media_folder: "/"
     fields:
       - { name: path, label: Path }
       - { name: title, label: Title }
