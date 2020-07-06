@@ -6,7 +6,7 @@
 
 const path = require('path');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images')
-const { createFilePath} = require('gatsby-source-filesystem')
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               description
               image {
                 childImageSharp {
-                  fluid(maxWidth: 600) {
+                  fluid(maxWidth: 300) {
                     src
                     srcSet
                     aspectRatio
@@ -49,7 +49,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const itemTemplate = path.resolve('src/templates/itemTemplate.js');
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const path = node.frontmatter.path
-    console.log('createPage')
     createPage({
       path,
       component: itemTemplate,
@@ -61,6 +60,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
 };
 
-exports.onCreateNode = ({ node}) => {
+exports.onCreateNode = ({ node }) => {
+  // very hacky way to make image url absolute for the markdown
+  if (node.internal.type === "MarkdownRemark" && node?.frontmatter?.image) node.frontmatter.image = node.frontmatter.image.replace(/^(?!\/)/, '/')
   fmImagesToRelative(node);
 };
