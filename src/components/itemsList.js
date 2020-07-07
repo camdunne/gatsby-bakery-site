@@ -10,7 +10,9 @@ import { useStaticQuery, Link } from "gatsby"
 import { GET_ALL_ITEMS } from "../queries/items"
 
 const ItemsList = () => {
-  const { allMarkdownRemark: { edges }} = useStaticQuery(GET_ALL_ITEMS)
+  const {
+    allMarkdownRemark: { edges },
+  } = useStaticQuery(GET_ALL_ITEMS)
 
   return (
     <div id="ItemsList">
