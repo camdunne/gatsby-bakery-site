@@ -6,17 +6,15 @@
  */
 
 import React from "react"
-import { useStaticQuery, Link } from "gatsby"
-import { GET_ALL_ITEMS } from "../queries/items"
+import { Link } from "gatsby"
+import useItemsQuery from "../hooks/useItemsQuery"
 
 const ItemsList = () => {
-  const {
-    allMarkdownRemark: { edges },
-  } = useStaticQuery(GET_ALL_ITEMS)
+  const items = useItemsQuery()
 
   return (
     <div id="ItemsList">
-      {edges.map(({ node: { frontmatter: { title, path } } }) => (
+      {items.map(({ node: { frontmatter: { title, path } } }) => (
         <div key={title}>
           <Link to={path}>{title}</Link>
         </div>

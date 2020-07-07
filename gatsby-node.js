@@ -62,7 +62,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 exports.onCreateNode = ({ node }) => {
   // very hacky way to make image url absolute for the markdown
-  if (node.internal.type === "MarkdownRemark" && node?.frontmatter?.image)
-    node.frontmatter.image = node.frontmatter.image.replace(/^(?!\/)/, "/")
+  if (
+    node.internal.type === "MarkdownRemark" &&
+    node.frontmatter &&
+    node.frontmatter.image
+  ) {
+    node.frontmatter.image = node.frontmatter.image.replace(/^(?!\/|\.)/, "/")
+  }
   fmImagesToRelative(node)
 }
