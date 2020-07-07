@@ -1,5 +1,5 @@
 ---
-path: cool
+path: /cool
 title: Cool Brownie
 price: 2
 image: brownie.jpeg

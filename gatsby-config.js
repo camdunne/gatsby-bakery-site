@@ -24,7 +24,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/item`,
-        name: 'content',
+        name: "content",
       },
     },
     `gatsby-transformer-sharp`,
@@ -41,7 +41,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`, 
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

@@ -4,11 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path');
-const {fmImagesToRelative} = require('gatsby-remark-relative-images')
+const path = require("path")
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   const result = await graphql(`
     {
@@ -46,7 +46,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const itemTemplate = path.resolve('src/templates/itemTemplate.js');
+  const itemTemplate = path.resolve("src/templates/itemTemplate.js")
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const path = node.frontmatter.path
     createPage({
@@ -56,12 +56,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         pagePath: path,
         product: node,
       },
-    });
-  });
-};
+    })
+  })
+}
 
 exports.onCreateNode = ({ node }) => {
   // very hacky way to make image url absolute for the markdown
-  if (node.internal.type === "MarkdownRemark" && node?.frontmatter?.image) node.frontmatter.image = node.frontmatter.image.replace(/^(?!\/)/, '/')
-  fmImagesToRelative(node);
-};
+  if (node.internal.type === "MarkdownRemark" && node?.frontmatter?.image)
+    node.frontmatter.image = node.frontmatter.image.replace(/^(?!\/)/, "/")
+  fmImagesToRelative(node)
+}
