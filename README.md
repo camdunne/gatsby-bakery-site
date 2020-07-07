@@ -8,6 +8,17 @@
 
     ```shell
     cd gatsby-bakery-site/
+    ```
+
+    Install Dependencies.
+
+    ```shell
+    yarn install
+    ```
+
+    Start it up.
+
+    ```shell
     yarn develop
     ```
 
